@@ -23,7 +23,7 @@ const App = () => {
       <Suspense fallback={<div style={{ textAlign: "center", marginTop: "20px" }}>⏳ Loading...</div>}>
         <Routes>
           <Route path="/lazyloading" element={<Home />} />
-          <Route path="/lazyloading/story" element={<Story />} />
+          <Route path="/story" element={<Story />} />
         </Routes>
       </Suspense>
     </Router>
