@@ -44,6 +44,9 @@ const Story = () => {
 
       if (nextContent.length > 0) {
         setVisibleContent((prev) => [...prev, ...nextContent]);
+      } else {
+        // If we reach the end of the content, start from the beginning
+        setVisibleContent((prev) => [...prev, ...content.slice(0, PAGE_SIZE)]);
       }
 
       setLoading(false);
