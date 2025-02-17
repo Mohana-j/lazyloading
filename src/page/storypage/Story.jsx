@@ -36,7 +36,6 @@ const Story = () => {
     if (loading) return;
 
     setLoading(true);
-    document.body.style.overflow = "hidden"; // Disable scrolling
 
     setTimeout(() => {
       const currentLength = visibleContent.length;
@@ -50,7 +49,6 @@ const Story = () => {
       }
 
       setLoading(false);
-      document.body.style.overflow = "auto"; // Enable scrolling
     }, 2000);
   }, [loading, visibleContent]);
 
